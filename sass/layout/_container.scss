@@ -1,0 +1,13 @@
+.container{
+    padding: 15rem 40rem;
+
+    &-red{
+        background-color: $color-red;
+        color: $color-white;
+    }
+
+    &-yellow{
+        background-color: $color-yellow;
+        color: $color-black;
+    }
+}

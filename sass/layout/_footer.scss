@@ -1,0 +1,42 @@
+.footer{
+    background-color: rgba($color-black, .9);
+    color: $color-white;
+    position: relative;
+    font-family: $default-font-family;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+
+    &-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8rem 30rem 15rem 30rem;
+    }
+
+    &__link{
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: $color-white;
+            font-family: $default-font-family;
+            font-weight: 400;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        &:hover{
+            color: $color-yellow;
+        }
+    }
+
+    &-copyright{
+        font-size: 1rem;
+        font-family: $default-font-family;
+        font-weight: 400;
+        color: $color-white;
+        padding-bottom: 1rem;
+    }
+}

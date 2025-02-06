@@ -1,0 +1,47 @@
+.header{
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    &-1{
+        background-image: linear-gradient(to right bottom,
+        rgba($color-red, 0.2),
+        rgba($color-red, 0.5) 60%,
+        rgba($color-red, 0.5) 100%),
+        url(../img/FXX_K.jpg);
+    }
+
+    &-2{
+        background-image: linear-gradient(to right bottom,
+        rgba($color-yellow, 0.2),
+        rgba($color-yellow, 0.4) 30%,
+        rgba($color-yellow, 0.6) 100%),
+        url(../img/2001.jpg);
+    }
+
+    &-3{
+        background-image: linear-gradient(to right bottom,
+        rgba($color-red, 0.2),
+        rgba($color-red, 0.3) 30%,
+        rgba($color-red, 0.5) 100%),
+        url(../img/Enzo.avif);
+    }
+
+    &__primary{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &--main{
+        display: block;
+        animation: MoveInLeft 1s ease-out;
+        }
+
+        &--sub{
+            display: block;
+            animation: MoveInRight 1s ease-out;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.navigation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    animation: MoveInTop 1s ease-out;
+    background-color: rgba($color-red, 0.7);
+
+    &__list{
+        list-style: none;
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        width: auto;
+
+
+        &--item{
+            padding: 3rem 0;
+            position: relative;
+
+            &:active{
+                color: $color-yellow;
+            }
+        }
+
+        &--link{
+            padding: 4rem;
+            text-decoration: none;
+            z-index: 1000;
+            position: relative;
+        }
+
+        &--item:hover > a{
+            color: $color-black;
+        }
+
+        &--item::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 800;
+            height: 1px;
+            width: 100%;
+            background-color: $color-yellow;
+            transform: scaleX(0);
+            transition: transform .2s, height .4s cubic-bezier(0.2, 0.5, 1, 1) .2s, background-color .1s;
+        }
+
+        &--item:hover::before,
+        &--active::before{
+            transform: scaleX(1);
+            height: 100%;
+        }
+
+        &--logo{
+            height: 100%;
+            width: 10rem;
+        }
+
+        &--active > a{
+            color: $color-black;
+        }
+    }
+}
+
+.navigation-logo{
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0;
+}
